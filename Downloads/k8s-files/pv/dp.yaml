@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mydpyellow
-  namespace: dev
   annotations:
     kubernetes.io/change-cause: "Deploy to yellowapp"
 spec:
@@ -34,3 +33,4 @@ spec:
         - name: mystorageaws
           persistentVolumeClaim:
             claimName: mypvc-blueapp
+            
