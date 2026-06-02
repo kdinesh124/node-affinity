@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: myyellow-container
-        image: 
+        image: nginx:latest
         ports:
           - containerPort: 80
         volume:
