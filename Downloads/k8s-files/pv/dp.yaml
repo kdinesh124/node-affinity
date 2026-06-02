@@ -26,8 +26,12 @@ spec:
         image: nginx:latest
         ports:
           - containerPort: 80
-        volume:
-          - persistentVolumeClaim:
+        volumeMounts:
+          - name: mystorageaws
+            mountPath: /usr/share/nginx/html
+      volumes:
+        - name: mystorageaws
+          persistentVolumeClaim:
               claimName: mypvc-blueapp
             
 
