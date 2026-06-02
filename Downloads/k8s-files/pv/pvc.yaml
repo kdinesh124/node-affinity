@@ -1,11 +1,11 @@
-apiVersion: storage.k8s.io/v1 
+apiVersion: v1
 kind: PersistentVolumeClaim
-metadata: 
+metadata:
   name: mypvc-blueapp
 spec:
   accessModes:
     - ReadWriteOnce
+  storageClassName: mysc-blueapp
   resources:
     requests:
       storage: 10Gi
-  storageClassName: mysc-blueapp
