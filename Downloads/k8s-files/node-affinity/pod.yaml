@@ -8,6 +8,7 @@ spec:
   affinity:
     nodeAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
+
         nodeSelectorTerms:
         - matchExpressions:
           - key: env
@@ -24,15 +25,15 @@ spec:
             values:
             - Blue
         topologyKey: kubernetes.io/zone
-
+    
     podAntiAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
       - labelSelector:
           matchExpressions:
           - key: app
-            operator: In
-            values:
-            - Red
+          operator: In
+          values:
+          - Red
         topologyKey: kubernetes.io/hostname
 
   containers:
