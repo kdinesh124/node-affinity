@@ -21,7 +21,7 @@ spec:
                 values:
                   - Blue
           topologyKey: kubernetes.io/zone
-    pordAntiAffinity:
+    podAntiAffinity:
       requiredDuringSchedulingIngoredDuringExecution:
         - labelSelector:
             matchExpressions:
